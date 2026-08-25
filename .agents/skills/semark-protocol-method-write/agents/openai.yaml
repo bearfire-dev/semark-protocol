@@ -1,0 +1,3 @@
+interface:
+  display_name: "Semark Protocol Method Write"
+  short_description: "Write or update Semark callable signatures"

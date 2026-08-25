@@ -1,0 +1,3 @@
+interface:
+  display_name: "Semark Protocol File Write"
+  short_description: "Write or update a Semark file signature"

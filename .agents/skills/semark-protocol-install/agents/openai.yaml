@@ -1,0 +1,3 @@
+interface:
+  display_name: "Semark Protocol Install"
+  short_description: "Install Semark in a TypeScript repository"
