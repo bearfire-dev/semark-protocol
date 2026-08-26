@@ -6,10 +6,6 @@ repository_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 skill_creator_root="${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator"
 skills=(
 	semark-protocol
-	semark-protocol-install
-	semark-protocol-audit
-	semark-protocol-file-write
-	semark-protocol-method-write
 )
 
 cd "$repository_root"

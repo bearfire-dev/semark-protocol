@@ -28,15 +28,13 @@ index, language-server replacement, or harness-specific context injection.
 
 | Path | Responsibility |
 | --- | --- |
-| `.agents/skills/semark-protocol/` | Defines the canonical protocol and signature formats. |
-| `.agents/skills/semark-protocol-install/` | Installs Semark in a TypeScript repository. |
-| `.agents/skills/semark-protocol-audit/` | Audits a repository for protocol violations. |
-| `.agents/skills/semark-protocol-file-write/` | Writes or updates one file signature. |
-| `.agents/skills/semark-protocol-method-write/` | Writes or updates callable signatures. |
+| `.agents/skills/semark-protocol/SKILL.md` | Routes all Semark work. |
+| `.agents/skills/semark-protocol/references/` | Defines install, audit, and signature workflows. |
+| `.agents/skills/semark-protocol/rules/` | Defines the canonical protocol rules. |
 | `scripts/check.sh` | Checks this repository and validates each skill package. |
 
-The canonical skill is the single source of truth. Operational skills reference it
-and do not redefine its formats.
+Semark Protocol uses one skill. Its entry point routes each request to the applicable
+workflow and rule modules. The rule modules are the single source of truth.
 
 ## Protocol boundaries
 
@@ -53,8 +51,8 @@ names. They do not replace them.
 
 ## Use
 
-Load `semark-protocol` when work requires the canonical rules. Load one operational
-skill when work requires installation, an audit, or signature changes.
+Load `semark-protocol` for all Semark work. Read only the workflow and rule modules that
+its route identifies.
 
 This repository contains the initial protocol and skill definitions. It does not yet
 publish a standalone validator package.
