@@ -1,6 +1,6 @@
 {
   "name": "@bearfire-dev/oxlint-plugin-semark",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Enforce Semark Protocol signatures and comment rules with Oxlint.",
   "license": "MIT",
   "type": "module",
