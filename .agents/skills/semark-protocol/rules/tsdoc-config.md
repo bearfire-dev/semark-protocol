@@ -17,5 +17,4 @@ Configure `@semarkFile` as a custom TSDoc modifier tag:
 }
 ```
 
-The repository can add other TSDoc settings. It must preserve this tag definition and
-support setting.
+Permit other TSDoc settings. Preserve this tag definition and support setting.

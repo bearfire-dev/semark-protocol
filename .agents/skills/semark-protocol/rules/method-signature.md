@@ -38,10 +38,10 @@ Use this structure and omit sections that do not apply:
  */
 ```
 
-The summary states concrete behavior. Use `@remarks` only for important facts that the
-summary and structural signature do not show.
+State concrete behavior in the summary. Use `@remarks` only for important facts that
+the summary and structural signature do not show.
 
-Remarks can use these labels in this order:
+Use only these remarks labels and keep this order:
 
 1. `Side effects:`
 2. `Invariant:`
@@ -49,7 +49,7 @@ Remarks can use these labels in this order:
 4. `Assumption:`
 5. `Interaction:`
 
-Use the tags in this order:
+Use only applicable tags and keep this order:
 
 1. `@typeParam`
 2. `@param`
@@ -65,10 +65,10 @@ intentional failure category that can cross the callable boundary.
 
 Apply these limits:
 
-- The summary contains one sentence and at most 25 words.
-- Each remarks paragraph contains at most two sentences and 50 words.
-- Each parameter, return, or failure description contains at most 30 words.
-- The complete signature contains at most 200 words.
+- Keep the summary to one sentence and at most 25 words.
+- Keep each remarks paragraph to two sentences and 50 words at most.
+- Keep each parameter, return, or failure description to 30 words at most.
+- Keep the complete signature to 200 words at most.
 
 Describe behavior, input meaning, result meaning, side effects, failures, invariants,
 constraints, assumptions, and non-obvious interactions only when they apply.

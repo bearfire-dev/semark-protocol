@@ -1,8 +1,8 @@
 # File signatures
 
-Each applicable file starts with one file signature. Put it after an approved shebang,
-license header, generated marker, or triple-slash directive. Put it before imports,
-exports, declarations, and executable statements.
+Add one file signature to the start of each applicable file. Put it after an approved
+shebang, license header, generated marker, or triple-slash directive. Put it before
+imports, exports, declarations, and executable statements.
 
 Use this exact structure:
 
@@ -19,16 +19,16 @@ Use this exact structure:
  */
 ```
 
-The first sentence states the file purpose. The `Responsibility:` paragraph states the
-behavior that the file owns. The `Boundary:` paragraph states ownership limits and
-relevant relationships.
+State the file purpose in the first sentence. State owned behavior in the
+`Responsibility:` paragraph. State ownership limits and relevant relationships in the
+`Boundary:` paragraph.
 
 Apply these limits:
 
-- The purpose contains one sentence and at most 25 words.
-- Each required paragraph contains at most two sentences and 50 words.
-- The complete signature contains at most 120 words.
-- Each statement describes one responsibility or boundary.
+- Keep the purpose to one sentence and at most 25 words.
+- Keep each required paragraph to two sentences and 50 words at most.
+- Keep the complete signature to 120 words at most.
+- Describe one responsibility or boundary in each statement.
 
 Do not list imports or exports. Do not include implementation steps, change history,
 temporary notes, speculation, or unrelated behavior.

@@ -1,6 +1,6 @@
 # Validation
 
-Validation must return a nonzero status for a violation. It can check:
+Make validation return a nonzero status for a violation. Check the applicable items from this list:
 
 - root and package README coverage
 - exact README names
@@ -13,11 +13,11 @@ Validation must return a nonzero status for a violation. It can check:
 - configured source coverage
 - changed-code signature updates
 
-Validation must not generate semantic descriptions. Humans and agents write the
-descriptions.
+Do not make validation generate semantic descriptions. Require a human or agent to write
+the descriptions.
 
-Each Semark installation must check unauthorized comments and invalid directives in the
-configured source scope.
+Check unauthorized comments and invalid directives in every Semark installation. Apply
+this check to the configured source scope.
 
-Agents must run the configured Semark check before they complete a change. They must
-correct violations that their change causes.
+Run the configured Semark check before you complete a change. Correct violations that
+your change causes.

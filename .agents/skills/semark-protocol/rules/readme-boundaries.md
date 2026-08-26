@@ -2,12 +2,12 @@
 
 ## Repository instructions
 
-`AGENTS.md` defines agent workflows, validation commands, repository conventions, and
-Semark responsibilities. It must not be the primary architecture document.
+Use `AGENTS.md` for agent workflows, validation commands, repository conventions, and
+Semark responsibilities. Do not use it as the primary architecture document.
 
-`AGENTS.md` must tell agents to load `semark-protocol` before they add or change
-TypeScript comments. It must prohibit source comments except Semark signatures and
-approved directives. It must include the configured Semark check command.
+Tell agents in `AGENTS.md` to load `semark-protocol` before they change TypeScript
+comments. Prohibit source comments except Semark signatures and approved directives.
+Include the configured Semark check command.
 
 Keep `AGENTS.md` as the canonical agent instruction. Link harness-specific instruction
 files to it when the repository supports links. Otherwise, add an equivalent policy to
@@ -15,23 +15,30 @@ each instruction file that the repository uses.
 
 ## Root README
 
-The root contains one `README.md`. It defines the repository purpose, major packages,
-architectural boundaries, package relationships, primary commands, and discovery entry
-points.
+Keep one `README.md` in the repository root. Define the repository purpose, major
+packages, architectural boundaries, package relationships, primary commands, and
+discovery entry points.
 
 Keep it as a concise repository map. Do not put detailed package or source behavior in
 it.
 
 ## Package README
 
-Each package or application contains exactly one `README.md`. It defines the package
-purpose, responsibilities, boundaries, relationships, organization, public role, and
-relevant commands.
+Keep exactly one `README.md` in each package or application. Define the package purpose,
+responsibilities, boundaries, relationships, organization, public role, and relevant
+commands.
 
-Do not add other general-purpose Markdown documents. A repository can explicitly allow
-machine configuration, contribution forms, security policy files, or generated reports.
+Do not add other general-purpose Markdown documents. Permit machine configuration,
+contribution forms, security policy files, or generated reports only with explicit
+repository approval.
 
 ## Skills
 
-Skills define repeatable agent behavior. They must not store general codebase memory or
-duplicate package architecture.
+Write each skill description as a selection rule for the agent. State when the agent
+must use the skill.
+
+Write each skill body as direct instructions to the agent. Do not explain skill benefits
+to a user.
+
+Use skills for repeatable agent behavior. Do not store general codebase memory or
+duplicate package architecture in a skill.

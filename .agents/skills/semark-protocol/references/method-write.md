@@ -1,28 +1,28 @@
 # Write a method signature
 
-Read these rule modules before you edit a callable:
+Use this workflow to write or update a method signature. Before the edit, read these rule modules:
 
 - [source-scope.md](../rules/source-scope.md)
 - [comments.md](../rules/comments.md)
 - [method-signature.md](../rules/method-signature.md)
 - [accuracy.md](../rules/accuracy.md)
 
-Their formats and limits are authoritative.
+Treat their formats and limits as requirements.
 
-## Workflow
+## Inspect the callable
 
 1. Read the enclosing file signature.
-2. Identify behavior, inputs, results, side effects, failures, invariants, and limits.
+2. Identify the behavior, inputs, results, side effects, failures, invariants, and limits.
 
-## Writing decisions
+## Write the signature
 
-Document only behavior that matters across the callable boundary. The TypeScript
-declaration remains the structural authority.
+Document only behavior that matters across the callable boundary. Treat the TypeScript
+declaration as the structural authority.
 
 Use parameter descriptions to explain meaning or constraints. Do not repeat a parameter
-name in prose without new information.
+name without new information.
 
-Use `@throws` only for an intentional failure category that can cross the boundary. Do
-not list internal exceptions that the callable converts or contains.
+Use `@throws` only for an intentional failure category that can cross the boundary. Omit
+converted or contained internal exceptions.
 
-Use remarks labels only when they add non-obvious behavior. Omit empty labels and tags.
+Use remarks labels only for non-obvious behavior. Omit empty labels and tags.

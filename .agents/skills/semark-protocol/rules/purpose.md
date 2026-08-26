@@ -1,6 +1,6 @@
 # Purpose
 
-Semark documentation must be:
+Keep Semark documentation:
 
 - concise
 - local to the documented code
@@ -10,5 +10,5 @@ Semark documentation must be:
 - independent of harness-specific context injection
 - accessible through normal shell and file operations
 
-Semark does not require a code graph, repository index, external knowledge store, or
+Do not require a code graph, repository index, external knowledge store, or
 language-server replacement.

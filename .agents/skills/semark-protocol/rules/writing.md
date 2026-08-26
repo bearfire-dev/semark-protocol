@@ -1,7 +1,8 @@
 # Semark writing
 
-Use these rules for Semark signatures, repository instructions, audit findings, and
-install reports. This module is self-contained. Do not load a separate writing skill.
+Use these rules for Semark signatures, repository instructions, audit findings, install
+reports, and skill instructions. Treat this module as self-contained. Do not load a
+separate writing skill.
 
 ## Signatures
 
@@ -21,6 +22,10 @@ install reports. This module is self-contained. Do not load a separate writing s
 - Put one rule or action in each sentence. Keep one topic in each paragraph.
 - Use exact paths, commands, tags, and finding categories.
 - Separate a requirement from its explanation.
+- Write each skill description as a selection rule for the agent.
+- State when the agent must use the skill.
+- Write each skill body as direct instructions to the agent.
+- Do not explain skill benefits to a user.
 
 ## Language
 

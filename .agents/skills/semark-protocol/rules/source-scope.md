@@ -1,7 +1,7 @@
 # Source scope
 
-Apply Semark to hand-authored `.ts`, `.tsx`, `.mts`, and `.cts` files. This scope
-includes source files, tests, build scripts, and TypeScript configuration files.
+Apply Semark to hand-authored `.ts`, `.tsx`, `.mts`, and `.cts` files. Include source
+files, tests, build scripts, and TypeScript configuration files in this scope.
 
 Exclude these files by default:
 
@@ -10,5 +10,5 @@ Exclude these files by default:
 - vendored source that the repository does not maintain
 - fixtures whose comments are test data
 
-A repository can define more exclusions in its Semark configuration. Each exclusion
-must use a stable path rule and a concise reason.
+Permit more exclusions when the Semark configuration defines them. Require a stable path
+rule and a concise reason for each exclusion.

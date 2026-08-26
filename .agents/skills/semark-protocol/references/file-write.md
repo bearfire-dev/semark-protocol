@@ -1,26 +1,27 @@
 # Write a file signature
 
-Read these rule modules before you edit a file:
+Use this workflow to write or update a file signature. Before the edit, read these rule modules:
 
 - [source-scope.md](../rules/source-scope.md)
 - [comments.md](../rules/comments.md)
 - [file-signature.md](../rules/file-signature.md)
 - [accuracy.md](../rules/accuracy.md)
 
-Their formats and limits are authoritative.
+Treat their formats and limits as requirements.
 
-## Workflow
+## Inspect the file
 
 1. Read the package `README.md`.
 2. Identify the file purpose, owned responsibility, boundary, and relationships.
 
-## Writing decisions
+## Write the signature
 
-Use the filename, exports, types, callers, and tests as evidence. Do not infer a larger
-responsibility than the implementation owns.
+Use the filename, exports, types, callers, and tests as evidence. Do not infer
+responsibility that the implementation does not own.
 
-The purpose states why the file exists. The responsibility states the behavior that it
-owns. The boundary states what it accepts, delegates, or does not own.
+State why the file exists in the purpose. State the behavior that the file owns in the
+responsibility.
+State what the file accepts, delegates, or does not own in the boundary.
 
-Do not list symbols. Do not describe control flow. Do not include a fact that the
-filename and types already make fully clear.
+Do not list symbols or describe control flow. Omit facts that the filename and types
+make fully clear.

@@ -15,7 +15,7 @@ Start with the smallest relevant context surface. Inspect the next level only wh
 current level does not supply enough information.
 
 Use tools such as `ls`, `find`, `rg`, `head`, `sed`, `cat`, and `git`. Do not read a
-complete package when its README excludes that package from the task.
+complete package if its README excludes that package from the task.
 
 ## Progressive discovery workflow
 

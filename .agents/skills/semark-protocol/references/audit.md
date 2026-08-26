@@ -1,25 +1,28 @@
 # Audit Semark compliance
 
-Read only the additional rule modules that cover the requested audit scope. A complete
-audit needs all modules in `../rules/` except `purpose.md` and `discovery.md`.
+Use this workflow to audit Semark compliance or to report findings. Report findings only
+unless the user also requests corrections.
 
-An audit only reports findings unless the user also requests corrections.
+Read only the rule modules that apply to the requested scope. For a complete audit, read
+all rule modules except:
 
-## Workflow
+- `purpose.md`
+- `discovery.md`
+
+## Audit workflow
 
 1. Identify the configured source scope, exclusions, and migration baseline.
-2. Locate the root and package README files.
+2. Locate the root README and package README files.
 3. Inspect applicable source comments and TSDoc blocks.
-4. Compare changed code with changed signatures when the audit includes a Git range.
-5. Inspect reported naming problems in their domain context.
-6. Confirm each finding against the applicable rule module.
+4. If the scope includes a Git range, compare changed code with changed signatures.
+5. Inspect each reported naming problem in its domain context.
+6. Compare each finding with the applicable rule.
 
-Do not infer semantic inaccuracy from wording alone. Read the implementation, related
-types, callers, or tests when a finding depends on behavior.
+Do not infer semantic inaccuracy from wording alone. Read more evidence when a finding
+depends on behavior.
+Use the implementation, related types, callers, and tests as evidence when necessary.
 
-## Finding categories
-
-Use these stable categories:
+## Use stable finding categories
 
 - `README_MISSING`
 - `README_NAME_INVALID`
@@ -38,20 +41,20 @@ Use these stable categories:
 - `NAME_AMBIGUOUS`
 - `CONFIGURATION_INVALID`
 
-## Output
+## Format the output
 
-Return one Markdown table. Do not return JSON, YAML, or record-style code blocks. Use
-exactly these columns:
+Return one Markdown table. Do not return JSON, YAML, or record-style code blocks.
+Use exactly these columns:
 
 | Status | Location | Category | Problem | Required change | Evidence |
 | --- | --- | --- | --- | --- | --- |
 
-Use `Confirmed` or `Review` in the `Status` column. Put `path:line` in `Location`. Use
-one row for each finding. Escape a pipe character when it occurs in a cell.
+Use `Confirmed` or `Review` in the `Status` column. Put `path:line` in the `Location` column.
+Use one row for each finding. Escape each pipe character that occurs in a cell.
 
-Sort confirmed violations before review items. Then sort by path and source location.
+Sort confirmed violations before review items. Then sort the rows by path and source location.
 Do not report style preferences as protocol violations.
 
-If the audit finds no violations, return the table header with no finding rows. Then
-state the audited scope, command results, and Git range. Do not claim full compliance
-outside that scope.
+If the audit finds no violations, return the table header without finding rows. Then
+state the audited scope and command results.
+Also state the Git range when the audit uses one. Do not claim compliance outside the audited scope.
