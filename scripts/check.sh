@@ -20,7 +20,7 @@ if [[ ! -L .claude/skills || "$(readlink .claude/skills)" != "../.agents/skills"
 	exit 1
 fi
 
-if rg -n '\[TODO|TODO:' README.md AGENTS.md .agents/skills; then
+if grep -RInE '\[TODO|TODO:' README.md AGENTS.md .agents/skills; then
 	echo "Remove all scaffold placeholders." >&2
 	exit 1
 fi
@@ -33,7 +33,7 @@ for skill in "${skills[@]}"; do
 		exit 1
 	fi
 
-	if ! rg -q "^name: $skill$" "$skill_path/SKILL.md"; then
+	if ! grep -qFx "name: $skill" "$skill_path/SKILL.md"; then
 		echo "The $skill frontmatter name is incorrect." >&2
 		exit 1
 	fi
