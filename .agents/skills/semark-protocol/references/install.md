@@ -79,6 +79,14 @@ If the repository uses Oxlint, configure the GitHub Packages registry for the
 `@bearfire-dev` scope. Install `@bearfire-dev/oxlint-plugin-semark`. Load it through
 `jsPlugins` and enable `semark/valid` in the root Oxlint configuration.
 
+Keep the scope-to-registry mapping in the project `.npmrc` file. Keep the token mapping
+in the trusted user-level `.npmrc` file. Do not commit a package token.
+
+For GitHub Actions, grant the consuming repository read access under the package
+`Manage Actions access` setting. Set `packages: read` in the workflow. Configure
+`actions/setup-node` with the GitHub Packages registry and `@bearfire-dev` scope. Pass
+the repository `GITHUB_TOKEN` as `NODE_AUTH_TOKEN` to the dependency installation step.
+
 Use a repository-local validator for requirements outside the Oxlint rule boundary.
 These requirements can include README coverage, migration scope, exclusions, naming,
 and changed-code signature updates.

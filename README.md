@@ -60,11 +60,17 @@ Configure npm to use the GitHub Packages registry for the `@bearfire-dev` scope:
 
 ```ini
 @bearfire-dev:registry=https://npm.pkg.github.com
+```
+
+Add this credential mapping to the user-level `~/.npmrc` file. Pnpm does not use
+credentials from a committed project `.npmrc` file.
+
+```ini
 //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
 ```
 
-Set `NODE_AUTH_TOKEN` to a GitHub personal access token (classic) with `read:packages`
-permission. Then install the Oxlint plugin in a TypeScript repository:
+Set `NODE_AUTH_TOKEN` to a GitHub personal access token (classic) with
+`read:packages` permission. Then install the Oxlint plugin in a TypeScript repository:
 
 ```bash
 npm install --save-dev oxlint @bearfire-dev/oxlint-plugin-semark
