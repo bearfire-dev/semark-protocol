@@ -75,7 +75,8 @@ existing comment.
 
 ## Add validation
 
-If the repository uses Oxlint, install `oxlint-plugin-semark`. Load it through
+If the repository uses Oxlint, configure the GitHub Packages registry for the
+`@bearfire-dev` scope. Install `@bearfire-dev/oxlint-plugin-semark`. Load it through
 `jsPlugins` and enable `semark/valid` in the root Oxlint configuration.
 
 Use a repository-local validator for requirements outside the Oxlint rule boundary.

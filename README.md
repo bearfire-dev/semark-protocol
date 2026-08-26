@@ -56,17 +56,25 @@ names. They do not replace them.
 Load `semark-protocol` for all Semark work. Read only the workflow and rule modules that
 its route identifies.
 
-Install the Oxlint plugin in a TypeScript repository:
+Configure npm to use the GitHub Packages registry for the `@bearfire-dev` scope:
+
+```ini
+@bearfire-dev:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+```
+
+Set `NODE_AUTH_TOKEN` to a GitHub personal access token (classic) with `read:packages`
+permission. Then install the Oxlint plugin in a TypeScript repository:
 
 ```bash
-npm install --save-dev oxlint oxlint-plugin-semark
+npm install --save-dev oxlint @bearfire-dev/oxlint-plugin-semark
 ```
 
 Load the plugin and enable its rule in the root `.oxlintrc.json` file:
 
 ```json
 {
-	"jsPlugins": ["oxlint-plugin-semark"],
+	"jsPlugins": ["@bearfire-dev/oxlint-plugin-semark"],
 	"rules": {
 		"semark/valid": "error"
 	}
@@ -82,6 +90,9 @@ through its `jsPlugins` configuration.
 
 The package requires Oxlint 1.80.0 or later in the 1.x release line. Oxlint currently
 marks its JavaScript plugin API as alpha, so pin Oxlint in production repositories.
+
+The package is available only from GitHub Packages. A GitHub release publishes the
+matching package version with the repository `GITHUB_TOKEN`.
 
 ## Check
 

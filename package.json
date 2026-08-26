@@ -1,5 +1,5 @@
 {
-  "name": "oxlint-plugin-semark",
+  "name": "@bearfire-dev/oxlint-plugin-semark",
   "version": "0.1.0",
   "description": "Enforce Semark Protocol signatures and comment rules with Oxlint.",
   "license": "MIT",
@@ -56,6 +56,6 @@
     "tsdoc"
   ],
   "publishConfig": {
-    "access": "public"
+    "registry": "https://npm.pkg.github.com"
   }
 }
