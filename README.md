@@ -31,6 +31,8 @@ index, language-server replacement, or harness-specific context injection.
 | `.agents/skills/semark-protocol/SKILL.md` | Routes all Semark work. |
 | `.agents/skills/semark-protocol/references/` | Defines install, audit, and signature workflows. |
 | `.agents/skills/semark-protocol/rules/` | Defines the canonical protocol rules. |
+| `src/` | Implements the published Oxlint plugin. |
+| `tests/` | Tests the plugin through the Oxlint command-line interface. |
 | `scripts/check.sh` | Checks this repository and validates each skill package. |
 
 Semark Protocol uses one skill. Its entry point routes each request to the applicable
@@ -54,14 +56,39 @@ names. They do not replace them.
 Load `semark-protocol` for all Semark work. Read only the workflow and rule modules that
 its route identifies.
 
-This repository contains the initial protocol and skill definitions. It does not yet
-publish a standalone validator package.
+Install the Oxlint plugin in a TypeScript repository:
+
+```bash
+npm install --save-dev oxlint oxlint-plugin-semark
+```
+
+Load the plugin and enable its rule in the root `.oxlintrc.json` file:
+
+```json
+{
+	"jsPlugins": ["oxlint-plugin-semark"],
+	"rules": {
+		"semark/valid": "error"
+	}
+}
+```
+
+The plugin checks file signatures, method signatures, TSDoc syntax, length limits, tag
+order, and approved source comments. Agents and reviewers remain responsible for semantic
+accuracy, naming quality, README coverage, and migration scope.
+
+The package uses TypeScript 7 for its build. Oxlint loads the compiled JavaScript plugin
+through its `jsPlugins` configuration.
+
+The package requires Oxlint 1.80.0 or later in the 1.x release line. Oxlint currently
+marks its JavaScript plugin API as alpha, so pin Oxlint in production repositories.
 
 ## Check
 
-Run the repository check from the repository root:
+Install the package dependencies. Then run the repository check from the repository root:
 
 ```bash
+npm install
 ./scripts/check.sh
 ```
 

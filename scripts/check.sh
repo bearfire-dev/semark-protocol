@@ -43,4 +43,10 @@ for skill in "${skills[@]}"; do
 	fi
 done
 
+if [[ -f package.json ]]; then
+	npm run build
+	npm run lint
+	npm test
+fi
+
 echo "All repository checks passed."

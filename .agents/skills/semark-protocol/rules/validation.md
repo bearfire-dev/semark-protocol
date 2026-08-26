@@ -19,5 +19,12 @@ the descriptions.
 Check unauthorized comments and invalid directives in every Semark installation. Apply
 this check to the configured source scope.
 
+If the repository uses Oxlint, load `oxlint-plugin-semark` through `jsPlugins`. Enable
+`semark/valid` as an error.
+
+Use repository validation for requirements outside the Oxlint rule boundary. These
+requirements include README coverage, semantic accuracy, naming, exclusions, migration
+scope, and changed-code signature updates.
+
 Run the configured Semark check before you complete a change. Correct violations that
 your change causes.

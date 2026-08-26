@@ -75,10 +75,15 @@ existing comment.
 
 ## Add validation
 
-Use existing TSDoc parsers and repository scripts when possible. Add the smallest local
-tool that can check all configured requirements.
-These requirements include scope, placement, tags, order, lengths, and the comment
-policy. The tool must reject unauthorized comments and invalid directives.
+If the repository uses Oxlint, install `oxlint-plugin-semark`. Load it through
+`jsPlugins` and enable `semark/valid` in the root Oxlint configuration.
+
+Use a repository-local validator for requirements outside the Oxlint rule boundary.
+These requirements can include README coverage, migration scope, exclusions, naming,
+and changed-code signature updates.
+
+If the repository does not use Oxlint, add the smallest local tool that can check the
+configured scope, placement, tags, order, lengths, directives, and comment policy.
 
 Make the check return a nonzero status for violations. Report the file, source location,
 and violation type.
