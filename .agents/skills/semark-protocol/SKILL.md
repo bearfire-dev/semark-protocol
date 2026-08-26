@@ -1,11 +1,12 @@
 ---
-
-## name: semark-protocol
+name: semark-protocol
 description: Use when a TypeScript repository task requires Semark Protocol. Apply it to installation, configuration, compliance audits, signatures, or protocol questions.
+---
 
 # Semark Protocol
 
-Use this skill for all comments and documentation work. This does not apply to seperate user facing documentation. Select the workflow that applies to each request. Treat the modules in `rules/` as the source of truth.
+Use this skill for all Semark Protocol work. Select each workflow that applies to the
+request. Treat the modules in `rules/` as the source of truth.
 
 ## Select a workflow
 
@@ -70,5 +71,4 @@ Also report the target and the behavior or boundary that the signature records.
 | [rules/writing.md](rules/writing.md)                     | Apply the Semark writing rules.                |
 | [rules/accuracy.md](rules/accuracy.md)                   | Keep signatures accurate.                      |
 | [rules/validation.md](rules/validation.md)               | Apply the validation requirements.             |
-
 
