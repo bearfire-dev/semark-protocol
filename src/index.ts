@@ -5,8 +5,6 @@
  * Responsibility: Publishes the Semark rule and its recommended severity.
  *
  * Boundary: Delegates source validation to the rule implementation and does not run Oxlint.
- *
- * @semarkFile
  */
 
 import { definePlugin } from "@oxlint/plugins";

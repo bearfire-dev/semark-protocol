@@ -65,10 +65,8 @@ Also report the target and the behavior or boundary that the signature records.
 | [rules/naming.md](rules/naming.md)                       | Apply the naming protocol.                     |
 | [rules/source-scope.md](rules/source-scope.md)           | Select applicable files and exclusions.        |
 | [rules/comments.md](rules/comments.md)                   | Classify source comments and directives.       |
-| [rules/tsdoc-config.md](rules/tsdoc-config.md)           | Configure the `@semarkFile` TSDoc tag.         |
 | [rules/file-signature.md](rules/file-signature.md)       | Apply the file-signature format and limits.    |
 | [rules/method-signature.md](rules/method-signature.md)   | Apply the method-signature format and limits.  |
 | [rules/writing.md](rules/writing.md)                     | Apply the Semark writing rules.                |
 | [rules/accuracy.md](rules/accuracy.md)                   | Keep signatures accurate.                      |
 | [rules/validation.md](rules/validation.md)               | Apply the validation requirements.             |
-
