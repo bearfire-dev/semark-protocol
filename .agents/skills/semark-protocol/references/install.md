@@ -8,7 +8,6 @@ change, read these rule modules:
 - [readme-boundaries.md](../rules/readme-boundaries.md)
 - [source-scope.md](../rules/source-scope.md)
 - [comments.md](../rules/comments.md)
-- [tsdoc-config.md](../rules/tsdoc-config.md)
 - [file-signature.md](../rules/file-signature.md)
 - [method-signature.md](../rules/method-signature.md)
 - [accuracy.md](../rules/accuracy.md)
@@ -27,13 +26,12 @@ Do not write semantic signatures without user authorization.
 2. Locate each instruction file that the installation must update.
 3. Identify applicable TypeScript files and explicit exclusions.
 4. Record the initial migration scope before you change enforcement.
-5. Add the `@semarkFile` TSDoc configuration.
-6. Add repository-local validation that fits the existing toolchain.
-7. Add a package script or documented command for the Semark check.
-8. Add the Semark check to the existing continuous integration workflow.
-9. Add missing root or package README files within the requested scope.
-10. Add the required Semark policy to `AGENTS.md`.
-11. Configure approved directive patterns and stable path exclusions.
+5. Add repository-local validation that fits the existing toolchain.
+6. Add a package script or documented command for the Semark check.
+7. Add the Semark check to the existing continuous integration workflow.
+8. Add missing root or package README files within the requested scope.
+9. Add the required Semark policy to `AGENTS.md`.
+10. Configure approved directive patterns and stable path exclusions.
 
 If no continuous integration workflow exists, report this limit. Do not create one
 unless the user requests it.

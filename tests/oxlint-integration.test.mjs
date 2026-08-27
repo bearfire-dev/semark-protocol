@@ -43,8 +43,6 @@ const validSource = `/**
  * Responsibility: Owns construction of the test greeting.
  *
  * Boundary: Accepts a name and does not write external state.
- *
- * @semarkFile
  */
 
 /**
@@ -76,6 +74,23 @@ test("reports a missing file signature", async () => {
     const result = runOxlint(consumer);
     assert.notEqual(result.status, 0);
     assert.match(result.stdout + result.stderr, /FILE_SIGNATURE_MISSING/u);
+  } finally {
+    await rm(consumer.directory, { recursive: true, force: true });
+  }
+});
+
+test("reports the prohibited @semarkFile tag", async () => {
+  const source = validSource.replace(
+    " * Boundary: Accepts a name and does not write external state.\n */",
+    " * Boundary: Accepts a name and does not write external state.\n *\n * @semarkFile\n */",
+  );
+  const consumer = await createConsumer(source);
+
+  try {
+    const result = runOxlint(consumer);
+    assert.notEqual(result.status, 0);
+    assert.match(result.stdout + result.stderr, /FILE_SIGNATURE_FORMAT/u);
+    assert.match(result.stdout + result.stderr, /Use only @remarks/u);
   } finally {
     await rm(consumer.directory, { recursive: true, force: true });
   }

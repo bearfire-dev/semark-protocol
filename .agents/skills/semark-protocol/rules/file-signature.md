@@ -14,8 +14,6 @@ Use this exact structure:
  * Responsibility: Owns session construction and persistence.
  *
  * Boundary: Accepts verified identities and does not verify credentials.
- *
- * @semarkFile
  */
 ```
 
@@ -32,3 +30,4 @@ Apply these limits:
 
 Do not list imports or exports. Do not include implementation steps, change history,
 temporary notes, speculation, or unrelated behavior.
+Do not use `@semarkFile` in a source comment.
