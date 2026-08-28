@@ -8,7 +8,7 @@ or agent-specific context system.
 ## Install
 
 ```bash
-bunx skills add bearfire-dev/semark-protocol
+bunx skills add paperkeel/semark-protocol
 ```
 
 Then give your agent this prompt:

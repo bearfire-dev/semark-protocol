@@ -703,7 +703,7 @@ export const semarkValidationRule = defineRule({
     docs: {
       description: "Require Semark signatures and approved source comments.",
       recommended: true,
-      url: "https://github.com/bearfire-dev/semark-protocol",
+      url: "https://github.com/paperkeel/semark-protocol",
     },
     schema: false,
   },
