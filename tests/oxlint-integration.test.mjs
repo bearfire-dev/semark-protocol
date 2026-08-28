@@ -7,7 +7,8 @@ import { spawnSync } from "node:child_process";
 import test from "node:test";
 
 const repositoryRoot = dirname(dirname(fileURLToPath(import.meta.url)));
-const oxlintPath = join(repositoryRoot, "node_modules", ".bin", "oxlint");
+const oxlintPackagePath = fileURLToPath(import.meta.resolve("oxlint/package.json"));
+const oxlintPath = join(dirname(oxlintPackagePath), "bin", "oxlint");
 const pluginPath = join(repositoryRoot, "dist", "index.js");
 
 async function createConsumer(source, filename = "source.ts") {
@@ -30,10 +31,17 @@ async function createConsumer(source, filename = "source.ts") {
 }
 
 function runOxlint(consumer) {
-  return spawnSync(oxlintPath, ["-c", consumer.configPath, consumer.sourcePath], {
-    cwd: consumer.directory,
-    encoding: "utf8",
-  });
+  const result = spawnSync(
+    process.execPath,
+    [oxlintPath, "-c", consumer.configPath, consumer.sourcePath],
+    {
+      cwd: consumer.directory,
+      encoding: "utf8",
+    },
+  );
+
+  assert.ifError(result.error);
+  return result;
 }
 
 const validSource = `/**
