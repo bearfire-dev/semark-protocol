@@ -33,7 +33,7 @@ creator validator.
 Run this command after each change:
 
 ```bash
-./scripts/check.sh
+pnpm run check
 ```
 
 The repository has no automatic correction command.
