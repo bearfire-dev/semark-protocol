@@ -1,5 +1,5 @@
 {
-  "name": "@bearfire-dev/oxlint-plugin-semark",
+  "name": "@paperkeel/oxlint-plugin-semark",
   "version": "0.1.1",
   "description": "Enforce Semark Protocol signatures and comment rules with Oxlint.",
   "license": "MIT",
@@ -42,12 +42,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bearfire-dev/semark-protocol.git"
+    "url": "git+https://github.com/paperkeel/semark-protocol.git"
   },
   "bugs": {
-    "url": "https://github.com/bearfire-dev/semark-protocol/issues"
+    "url": "https://github.com/paperkeel/semark-protocol/issues"
   },
-  "homepage": "https://github.com/bearfire-dev/semark-protocol#readme",
+  "homepage": "https://github.com/paperkeel/semark-protocol#readme",
   "keywords": [
     "oxlint",
     "oxlint-plugin",
